@@ -1,4 +1,36 @@
+body{
+    display: grid;
+    grid-template-areas:    'header'
+                            'main form'
+                            'otherDiv' /** pendiente poner nombre copado*/
+                            'footer';
+}
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+}
 
+.mainInfo{
+    grid-area: main;
+}
+.otherDiv{
+    grid-area: otherDiv;
+}
+
+#assistForm{
+    grid-area: form;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 10; /** testing */
+}
+
+#assistForm form{
+    width: min-content; 
+    /** modificar */
+}
 
 
 
