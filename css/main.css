@@ -2,11 +2,10 @@ body{
     margin: 0;
 }
 header{
-    text-align: center;
-    display: grid;
+    background-color: #ffd6a8;
 }
 footer{
-    position: fixed;
+    position: relative;
     bottom: 0px;
     width: 100%;
     background-color: #F8F9F9;
@@ -21,6 +20,7 @@ section{
     display: grid;
     grid-template-areas:    'main form'
                             'otherDiv otherDiv'; /** pendiente poner nombre copado*/
+    margin: 5% 15%;
 }
 header h1{
     font-family: SharpSansNo1-Bold;
@@ -28,16 +28,48 @@ header h1{
     color: #021800;
     text-align: center;
     line-height: 52px;
+    margin: 10px;
 }
-header h2{
+form{
+    font-family: SharpSansNo1-Semibold;
+    font-size: 14px;
+    color: #02363D;
+}
+form h2, h3{
+    text-align: center;
+}
+form h2{
+    font-size: 20px;
+    line-height: 29px;
+}
+form button[type=submit]{
+    background: #02363D;
+    font-size: 19px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 80%;
+    margin: 2%;
+}
+form button[type=submit]:hover{
+    cursor: pointer;
+    background: #03262b;
+}
+
+.titleDiv{
+    padding: 5%;
+    text-align: center;
+    display: grid;
+}
+.date{
     font-family: SharpSansNo1-Bold;
     font-size: 21px;
     font-weight: normal;
     color: #00373E;
     text-align: center;
     line-height: 40px;
+    margin: 0;
 }
-header h3{
+.logo{
     justify-self: center;
     background-color: #c05100;
     border-radius: 5px;
@@ -50,30 +82,7 @@ header h3{
     width: fit-content;
     padding: 0.5em 1em;
 }
-form{
-    font-family: SharpSansNo1-Semibold;
-    font-size: 14px;
-    color: #02363D;
-}
-form h2{
-    font-size: 20px;
-    text-align: center;
-    line-height: 29px;
-}
-form button[type=submit]{
-    background: #02363D;
-    font-size: 19px;
-    color: #FFFFFF;
-    text-align: center;
-}
-form button[type=submit]:hover{
-    cursor: pointer;
-    background: #03262b;
-}
-
-
 .mainInfo{
-    width: 50%;
     grid-area: main;
 }
 .mainInfo p, footer{
@@ -87,13 +96,29 @@ form button[type=submit]:hover{
     grid-area: otherDiv;
 }
 
+
+
 #assistForm{
-    grid-area: form;
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr;
+    background-color:  #F8F9F9;
+    padding: 0 5%;
     z-index: 10; /** testing */
 }
+
+#logosSpan{
+    display: flex;
+    flex-flow: wrap;
+}
+#logosSpan img{
+    justify-self: center;
+    padding: 5px;
+    height: 25px;   
+}
+#logosSpan img:hover{
+    cursor: pointer;
+    border: 1px rgba(0, 0, 0, 0.377) solid;
+    border-radius: 2px;
+}
+
 
 input, select{
     display: block;
@@ -127,6 +152,21 @@ input{
          display: none;
          width: 100%;
          height: 100%;
+         position: fixed;
+         top: 0;
+         left: 0;
+         padding: 0;
+     }
+     #assistForm form{
+         display: grid;
+         justify-content: center;
+     }
+     #assistForm button{
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         margin: 0;
      }
  }
  @media screen and (min-width:661px){
@@ -134,6 +174,17 @@ input{
         display: none;
     }
     #assistForm{
-        display: block;
+        grid-area: form;
+    }
+    section{
+        grid-template-areas: 'main' 'form' 'otherDiv';
+    }
+}
+@media screen and (min-width:990px) {
+    section{
+        grid-template-columns: 50% 50%;
+        grid-template-areas:    'main form'
+                                'main _'
+                                'otherDiv otherDiv' !important; /** pendiente poner nombre copado*/
     }
 }
