@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return res.json();})
     .then(data => {
         let countryNames = [];
-        let output = "";
+        let output = '<option disabled selected>Selecciona un país</option> ';
+        //filtrar aca si es solo paises de latam
         data.forEach(country => {
             countryNames.push(country.translations.spa.common);
         })
-        console.log(countryNames);
         countryNames.sort();
-        console.log(countryNames);
         countryNames.forEach(country => {
             output += `
             <option value="${country}">${country}</option>`;

@@ -1,19 +1,87 @@
 body{
-    display: grid;
-    grid-template-areas:    'header'
-                            'main form'
-                            'otherDiv' /** pendiente poner nombre copado*/
-                            'footer';
+    margin: 0;
 }
 header{
-    grid-area: header;
+    text-align: center;
+    display: grid;
 }
 footer{
-    grid-area: footer;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #F8F9F9;
+}
+footer > div{
+    margin: 10px 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #405457;
+}
+section{
+    display: grid;
+    grid-template-areas:    'main form'
+                            'otherDiv otherDiv'; /** pendiente poner nombre copado*/
+}
+header h1{
+    font-family: SharpSansNo1-Bold;
+    font-size: 40px;
+    color: #021800;
+    text-align: center;
+    line-height: 52px;
+}
+header h2{
+    font-family: SharpSansNo1-Bold;
+    font-size: 21px;
+    font-weight: normal;
+    color: #00373E;
+    text-align: center;
+    line-height: 40px;
+}
+header h3{
+    justify-self: center;
+    background-color: #c05100;
+    border-radius: 5px;
+    font-family: SharpSansNo1-Bold;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0.93px;
+    text-align: center;
+    line-height: 15px;
+    width: fit-content;
+    padding: 0.5em 1em;
+}
+form{
+    font-family: SharpSansNo1-Semibold;
+    font-size: 14px;
+    color: #02363D;
+}
+form h2{
+    font-size: 20px;
+    text-align: center;
+    line-height: 29px;
+}
+form button[type=submit]{
+    background: #02363D;
+    font-size: 19px;
+    color: #FFFFFF;
+    text-align: center;
+}
+form button[type=submit]:hover{
+    cursor: pointer;
+    background: #03262b;
 }
 
+
 .mainInfo{
+    width: 50%;
     grid-area: main;
+}
+.mainInfo p, footer{
+    font-family: ProximaNova-Regular;
+    font-size: 16px;
+    color: #405457;
+    letter-spacing: 0;
+    line-height: 28px;
 }
 .otherDiv{
     grid-area: otherDiv;
@@ -21,15 +89,19 @@ footer{
 
 #assistForm{
     grid-area: form;
-    max-width: 50%;
+    width: 50%;
     display: grid;
     grid-template-columns: 1fr;
     z-index: 10; /** testing */
 }
 
-#assistForm form{
-    width: min-content; 
-    /** modificar */
+input, select{
+    display: block;
+    width: 80%; 
+    min-width: min-content;
+}
+input{
+    height: 2em;
 }
 
 
@@ -44,11 +116,17 @@ footer{
 
 
  @media screen and (max-width:660px){
+    section{
+        grid-template-areas:'main'
+                            'otherDiv';
+    }
      .mobileNav{
          display: block;
      }
      #assistForm{
          display: none;
+         width: 100%;
+         height: 100%;
      }
  }
  @media screen and (min-width:661px){
