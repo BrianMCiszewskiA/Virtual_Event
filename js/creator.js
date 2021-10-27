@@ -29,19 +29,23 @@ function createOrganizers(){
     where = document.getElementById("organizers");
     organizers.forEach(organizer =>{
         where.appendChild(organizerDiv(organizer));
+        where.appendChild(document.createElement("br"));
     })
 }
 function organizerDiv(org){
     box = document.createElement("div");
+    nBox = document.createElement("div");
     h4 = document.createElement("h4");
     h3 = document.createElement("h3");
     t3 = document.createTextNode(org.name);
     t4 = document.createTextNode(org.job);
+    nBox.setAttribute("class", "nameBox");
     box.appendChild(createImage(`assets/${org.photo}`, org.name));
     h3.appendChild(t3);
     h4.appendChild(t4);
-    box.appendChild(h3);
-    box.appendChild(h4);
+    nBox.appendChild(h3);
+    nBox.appendChild(h4);
+    box.appendChild(nBox);
     return box;
 }
 

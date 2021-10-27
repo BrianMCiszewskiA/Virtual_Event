@@ -35,7 +35,7 @@ form{
     font-size: 14px;
     color: #02363D;
 }
-form h2, h3{
+form h2, #assistForm h3{
     text-align: center;
 }
 form h2{
@@ -95,6 +95,13 @@ form button[type=submit]:hover{
 .otherDiv{
     grid-area: otherDiv;
 }
+.nameBox{
+    display: grid !important;
+    grid-template-rows: 1fr 1fr;
+}
+.nameBox h3, .nameBox h4{
+    margin:1px;
+}
 
 
 
@@ -117,6 +124,12 @@ form button[type=submit]:hover{
     cursor: pointer;
     border: 1px rgba(0, 0, 0, 0.377) solid;
     border-radius: 2px;
+}
+#organizers img{
+    height: 5em;
+}
+#organizers div{
+    display: flex;
 }
 
 
