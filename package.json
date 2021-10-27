@@ -17,6 +17,6 @@
   "homepage": "https://github.com/BrianMCiszewskiA/Virtual_Event#readme",
   "description": "",
   "dependencies": {
-    "firebase": "^9.1.3"
+    "firebase": "^9.1.1"
   }
 }
