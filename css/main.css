@@ -3,6 +3,7 @@ body{
 }
 header{
     background-color: #ffd6a8;
+    width: 100%;
 }
 footer{
     position: relative;

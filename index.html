@@ -7,6 +7,7 @@
     <title>Event Invitation</title> <!-- modificar -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
 </head>
 <body>
@@ -69,11 +70,12 @@
             </div>
         </div>
     </footer>
-    <script src="js/logo.js"></script>
-    <script src="js/organizer.js"></script>
-    <script src="js/creator.js"></script>
-    <script src="js/main.js"></script>
-    <script type="module" src="js/dbInit.js"></script>
-    <script type="module"src="js/form.js"></script>
+    <script src="scripts/logo.js"></script>
+    <script src="scripts/organizer.js"></script>
+    <script src="scripts/creator.js"></script>
+    <script data-main="scripts/app" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <script type="module" src="scripts/dbInit.js"></script>
+    <script defer src="scripts/dbFunction.js"></script>
+    <script defer src="scripts/form.js"></script>
 </body>
 </html>
