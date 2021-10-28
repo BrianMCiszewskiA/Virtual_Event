@@ -26,6 +26,7 @@ forms[0].addEventListener('submit', function (event) {
     if(allFieldsAreValid()){
         addAssistant();
         popUpLoginSuccesful();
+        resetValues();
     }
 })
 
@@ -90,8 +91,13 @@ function isValidMail(mail){
     return mail.includes("@")&&mail.includes(".");
 }
 function isAlreadyRegistered(mail){
-    
+    //aca tendria que checkear comparando si ya esta dentro de la base de datos, con un get o algo asi, pero ya pelee bastante con la db por un dia.
+    return false;
 }
-function popUpLoginSuccesful(){
-    document.getElementById("loginSuccesful").style.display="block";
+function resetValues(){
+    for(i=0; i<forms[0].length-1; i++){
+        forms[0][i].value="";
+    };
+    forms[0][3].value="Selecciona un país";
+    resetFields();
 }

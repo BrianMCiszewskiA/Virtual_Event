@@ -3,6 +3,12 @@ createOrganizers();
 function showAssistForm(){
   document.getElementById("assistForm").style.display="block";
 }
+function popUpLoginSuccesful(){
+    document.getElementById("modal").style.display="block";
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 

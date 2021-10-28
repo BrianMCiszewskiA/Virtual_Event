@@ -115,7 +115,7 @@ form button[type=submit]:hover{
 #assistForm{
     background-color:  #F8F9F9;
     padding: 0 5%;
-    z-index: 10; /** testing */
+    z-index: 1;
 }
 
 #logosSpan{
@@ -137,6 +137,18 @@ form button[type=submit]:hover{
 }
 #organizers div{
     display: flex;
+}
+#organizers h3, #organizers h4{
+    font-family: SharpSansNo1-Semibold;
+    line-height: 26px;
+}
+#organizers h3{
+    font-size: 20px;
+    color: #02363D;
+}
+#organizers h4{
+    font-size: 16px;
+    color: #021800;
 }
 
 

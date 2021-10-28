@@ -7,6 +7,7 @@
     <title>Event Invitation</title> <!-- modificar -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
     <script type="module" src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
 </head>
@@ -24,6 +25,15 @@
             </button>
         </nav>
     </header>
+    <div id="modal">
+		<div id="modalContent">
+			<span id="closeButton" onclick="closeModal()">&times;</span>
+			<div id="loginSuccesful">
+				<h3>Asistencia confirmada!</h3><br>
+                <h4>Gracias por su interes!</h4>
+			</div>
+		</div>
+	</div>
     <section>
     <div class="mainInfo">
         <span id="logosSpan"></span>
@@ -78,5 +88,13 @@
     <script type="module" src="scripts/dbInit.js"></script>
     <script defer src="scripts/dbFunction.js"></script>
     <script defer src="scripts/form.js"></script>
+    <script>
+        var modal = document.getElementById("modal");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
