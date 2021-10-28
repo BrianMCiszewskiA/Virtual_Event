@@ -103,6 +103,12 @@ form button[type=submit]:hover{
 .nameBox h3, .nameBox h4{
     margin:1px;
 }
+.valid{
+    border-color: green;
+}
+.invalid{
+    border-color: red;
+}
 
 
 
