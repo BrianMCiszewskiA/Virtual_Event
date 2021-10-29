@@ -196,6 +196,9 @@ input{
      .mobileNav{
          display: block;
      }
+     .otherDiv{
+         display:none;
+     }
      #assistForm{
          display: none;
          width: 100%;
