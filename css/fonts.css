@@ -10,3 +10,7 @@
     font-family: SharpSansNo1-Semibold;
     src: url(../fonts/SharpSansNo1-Bold.woff2);
 }
+@font-face {
+    font-family: Social-Media;
+    src: url(../fonts/Icons_Social_Media_8.ttf);
+}

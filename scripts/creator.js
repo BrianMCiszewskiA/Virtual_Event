@@ -3,7 +3,7 @@ let asobanca = new Logo("Asobanca", "asobanca.png", "link pendiente");
 let ipbf = new Logo("IPBF", "Captura de Pantalla 2020-12-09 a la(s) 01.25.30 p. m..jpg", "link pendiente");
 let highTelecom = new Logo("HighTelecom", "logo_hightelecom_horizontal.png", "link pendiente");
 let ebanx = new Logo("Ebanx", "ebanx2_1.png", "link pendiente");
-let zendesk = new Logo("Zendesk", ".png", "link pendiente");
+let zendesk = new Logo("Zendesk", "zendesk.png", "link pendiente");
 let logos = [clusterFinanciero, asobanca, ipbf, highTelecom, ebanx, zendesk];
 
 let president = new Organizer("José Perez", "img-rodriguez.png", "Presidente");

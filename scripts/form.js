@@ -42,7 +42,7 @@ function checkField(field){
                     break;
         case 'email':checkEmail(field);
                     break;
-        case 'tel': checkTel(field);
+        case 'number': checkTel(field);
                     break;
         case 'select-one': checkSelect(field);
                             break;
@@ -91,7 +91,7 @@ function isValidMail(mail){
     return mail.includes("@")&&mail.includes(".");
 }
 function isAlreadyRegistered(mail){
-    //aca tendria que checkear comparando si ya esta dentro de la base de datos, con un get o algo asi, pero ya pelee bastante con la db por un dia.
+    //aca tendria que checkear comparando si ya esta dentro de la base de datos, con un get o algo asi. y ahi comparar si el valor del parametro, coincide con alguno de la db.
     return false;
 }
 function resetValues(){
